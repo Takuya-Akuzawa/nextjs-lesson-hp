@@ -34,7 +34,7 @@ export default function Post({ post }) {
           <span>Back to blog-page</span>
         </div>
       </Link>
-    </Layout >
+    </Layout>
   )
 }
 
@@ -48,7 +48,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const { post: post } = await getPostData(params.id)
+  const post = await getPostData(params.id)
   return {
     props: {
       post,
